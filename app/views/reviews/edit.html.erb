@@ -1,0 +1,10 @@
+<%= link_to "Retourner à la page du resto", restaurant_path(@review.restaurant), class: "btn btn-primary" %>
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.label "Commentaire :" %>
+  <%= f.input :content %>
+
+  <%= f.label "Quelle note entre 0 et 5 ?" %>
+  <%= f.input :rating %>
+
+  <%= f.submit "Poster un commentaire", class: "btn btn-primary" %>
+<% end %>

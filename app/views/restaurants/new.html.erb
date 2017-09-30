@@ -1,0 +1,11 @@
+<%= simple_form_for [@restaurant] do |f| %>
+  <%= f.label "Comment s'appelle le resto ?" %>
+  <%= f.input :name %>
+  <%= f.label "Quelle est l'addresse ?" %>
+  <%= f.input :address %>
+  <%= f.label "C'est quoi son num ?" %>
+  <%= f.input :phone_number %>
+  <%= f.label "Quelle catégo ?" %>
+  <%= f.input :category %>
+  <%= f.submit "Crée le resto", class: "btn btn-primary" %>
+<% end %>

@@ -1,0 +1,16 @@
+<p><%= link_to "Retourner à la page du resto", restaurant_path(@review.restaurant) %></p>
+<p><%= link_to "Éditer", edit_review_path(@review) %></p>
+<p>
+  <%= link_to "Supprimer", review_path(@review),
+  method: :delete,
+  data: { confirm: "T'es sûr ?" } %>
+</p>
+
+<ul>
+  <li>
+    <%= @review.content%>
+  </li>
+  <li>
+    <%= @review.rating %>
+  </li>
+</ul>

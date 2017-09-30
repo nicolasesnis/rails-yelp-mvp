@@ -1,0 +1,27 @@
+<p><%= link_to "Retourner à l'accueil", restaurants_path %></p>
+
+<ul>
+  <li>
+    <%= @restaurant.name%>
+  </li>
+  <li>
+    <%= @restaurant.address %>
+  </li>
+  <li>
+    <%= @restaurant.phone_number %>
+  </li>
+  <li>
+    <%= @restaurant.category %>
+  </li>
+</ul>
+
+<p>Reviews :</p>
+<p><%= link_to "ajouter un com", new_restaurant_review_path(@restaurant) %></p>
+<ul>
+  <% @reviews.each do |review| %>
+  <li>
+    <%= link_to "#{review.content}", review_path(review) %>
+    <%= review.rating %>
+  </li>
+  <% end %>
+</ul>
